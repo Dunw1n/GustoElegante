@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О нас | Gusto Elegante</title>
+    
+    <!-- Подключаем иконки Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Подключаем красивый шрифт -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Подключаем AOS для анимаций при скролле -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    
+    <!-- Основные стили -->
+    
+    <!-- Фавикон -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <script type="module" crossorigin src="./assets/js/main-B-qqraqj.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/css/main-K8lbuoSD.css">
+</head>
+<body class="theme-light">
+    <!-- Переключатель темы -->
+    <div class="theme-toggle">
+        <button class="theme-toggle__button" aria-label="Переключить тему">
+            <i class="fas fa-moon theme-toggle__icon"></i>
+        </button>
+    </div>
+
+    <!-- Главный header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="navbar__logo">Gusto Elegante</a>
+                
+                <button class="navbar__burger" aria-label="Меню">
+                    <span class="navbar__burger-line"></span>
+                    <span class="navbar__burger-line"></span>
+                    <span class="navbar__burger-line"></span>
+                </button>
+                
+                <ul class="navbar__menu">
+                    <li class="navbar__item">
+                        <a href="index.html" class="navbar__link">Главная</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="about.html" class="navbar__link navbar__link--active">О нас</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="catalog.html" class="navbar__link">Каталог</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="#" class="navbar__link navbar__link--reservation">Резервация</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero секция для страницы "О нас" -->
+    <section class="hero hero--about">
+        <div class="container">
+            <div class="hero__content" data-aos="fade-up">
+                <h1 class="hero__title">Наша история</h1>
+                <p class="hero__subtitle">Более 15 лет мы создаем гастрономические впечатления, которые запоминаются навсегда</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция "Наша философия" -->
+    <section class="about-philosophy">
+        <div class="container">
+            <div class="about-philosophy__content">
+                <div class="about-philosophy__text" data-aos="fade-right">
+                    <h2 class="section-title">Философия вкуса</h2>
+                    <p class="about-philosophy__description">
+                        В основе нашего ресторана лежит философия, что еда — это не просто утоление голода, а настоящее искусство, способное пробуждать эмоции и создавать воспоминания.
+                    </p>
+                    <p class="about-philosophy__description">
+                        Мы верим, что каждый ингредиент имеет свою историю, и наша задача — рассказать её через вкус. Именно поэтому мы тщательно отбираем поставщиков, работая только с теми, кто разделяет наши ценности качества и уважения к природе.
+                    </p>
+                    <blockquote class="about-philosophy__quote">
+                        "Настоящая кухня — это диалог между традициями и инновациями, между шеф-поваром и гостем"
+                    </blockquote>
+                </div>
+                <div class="about-philosophy__image" data-aos="fade-left" data-aos-delay="200">
+                    <img src="./assets/images/phylosofy--CqoDdIj.webp" alt="">
+                    <div class="about-philosophy__image-placeholder"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция "Наша команда" -->
+    <section class="team">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Наша команда</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Талантливые профессионалы, которые делают каждый ваш визит незабываемым</p>
+            
+            <div class="team__grid">
+                <div class="team-member" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="team-member__image">
+                        <img src="data:image/png;base64,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" alt="">
+                        <div class="team-member__image-placeholder"></div>
+                    </div>
+                    <div class="team-member__info">
+                        <h3 class="team-member__name">Антонио Риццоли</h3>
+                        <p class="team-member__position">Шеф-повар</p>
+                        <p class="team-member__description">Опыт работы в ресторанах Милана и Парижа. Специалист в области средиземноморской кухни.</p>
+                        <div class="team-member__social">
+                            <a href="#" class="team-member__social-link"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="team-member__social-link"><i class="fab fa-facebook-f"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="team-member" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="team-member__image">
+                         <img src="data:image/png;base64,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" alt="">
+                        <div class="team-member__image-placeholder"></div>
+                    </div>
+                    <div class="team-member__info">
+                        <h3 class="team-member__name">Екатерина Волкова</h3>
+                        <p class="team-member__position">Управляющий сомелье</p>
+                        <p class="team-member__description">Сертифицированный сомелье с 10-летним опытом. Знаток французских и итальянских вин.</p>
+                        <div class="team-member__social">
+                            <a href="#" class="team-member__social-link"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="team-member__social-link"><i class="fab fa-facebook-f"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="team-member" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="team-member__image">
+                         <img src="data:image/png;base64,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" alt="">
+                        <div class="team-member__image-placeholder"></div>
+                    </div>
+                    <div class="team-member__info">
+                        <h3 class="team-member__name">Мария Соколова</h3>
+                        <p class="team-member__position">Кондитер</p>
+                        <p class="team-member__description">Выпускница Le Cordon Bleu. Создает десерты, которые являются произведениями искусства.</p>
+                        <div class="team-member__social">
+                            <a href="#" class="team-member__social-link"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="team-member__social-link"><i class="fab fa-facebook-f"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция "Наши достижения" -->
+    <section class="achievements">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Наши достижения</h2>
+            
+            <div class="achievements__grid">
+                <div class="achievement" data-aos="fade-up" data-aos-delay="100">
+                    <div class="achievement__number">15+</div>
+                    <div class="achievement__title">Лет опыта</div>
+                    <div class="achievement__description">Успешно работаем с 2008 года</div>
+                </div>
+                
+                <div class="achievement" data-aos="fade-up" data-aos-delay="200">
+                    <div class="achievement__number">50+</div>
+                    <div class="achievement__title">Наград</div>
+                    <div class="achievement__description">Международные и национальные награды</div>
+                </div>
+                
+                <div class="achievement" data-aos="fade-up" data-aos-delay="300">
+                    <div class="achievement__number">1000+</div>
+                    <div class="achievement__title">Довольных гостей</div>
+                    <div class="achievement__description">Ежемесячно посещают наш ресторан</div>
+                </div>
+                
+                <div class="achievement" data-aos="fade-up" data-aos-delay="400">
+                    <div class="achievement__number">200+</div>
+                    <div class="achievement__title">Блюд в меню</div>
+                    <div class="achievement__description">Уникальные рецепты от наших шеф-поваров</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер (одинаковый для всех страниц) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__column">
+                    <h3 class="footer__title">Gusto Elegante</h3>
+                    <p class="footer__text">Ресторан высокой кухни, где традиции встречаются с инновациями. Мы создаем незабываемые гастрономические впечатления.</p>
+                    <div class="footer__social">
+                        <a href="#" class="footer__social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="footer__social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="footer__social-link"><i class="fab fa-telegram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer__column">
+                    <h3 class="footer__title">Контакты</h3>
+                    <ul class="footer__list">
+                        <li class="footer__list-item">
+                            <i class="fas fa-map-marker-alt footer__list-icon"></i>
+                            <span>ул. Гастрономическая, 15</span>
+                        </li>
+                        <li class="footer__list-item">
+                            <i class="fas fa-phone footer__list-icon"></i>
+                            <span>+7 (495) 123-45-67</span>
+                        </li>
+                        <li class="footer__list-item">
+                            <i class="fas fa-envelope footer__list-icon"></i>
+                            <span>reserve@gustoelegante.ru</span>
+                        </li>
+                        <li class="footer__list-item">
+                            <i class="fas fa-clock footer__list-icon"></i>
+                            <span>Ежедневно с 12:00 до 00:00</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="footer__column">
+                    <h3 class="footer__title">Навигация</h3>
+                    <ul class="footer__list">
+                        <li class="footer__list-item">
+                            <a href="index.html" class="footer__link">Главная</a>
+                        </li>
+                        <li class="footer__list-item">
+                            <a href="about.html" class="footer__link">О нас</a>
+                        </li>
+                        <li class="footer__list-item">
+                            <a href="catalog.html" class="footer__link">Каталог</a>
+                        </li>
+                        <li class="footer__list-item">
+                            <a href="#" class="footer__link">Галерея</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p class="footer__copyright">© 2023 Gusto Elegante. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Модальное окно для резервации -->
+    <div class="modal modal--reservation">
+        <div class="modal__overlay"></div>
+        <div class="modal__content">
+            <button class="modal__close" aria-label="Закрыть">
+                <i class="fas fa-times"></i>
+            </button>
+            <h2 class="modal__title">Забронировать столик</h2>
+            <p class="modal__subtitle">Оставьте заявку и мы свяжемся с вами для подтверждения бронирования</p>
+            
+            <form class="reservation-form">
+                <div class="reservation-form__group">
+                    <input type="text" class="reservation-form__input" placeholder="Ваше имя" required>
+                </div>
+                <div class="reservation-form__group">
+                    <input type="tel" class="reservation-form__input" placeholder="Телефон" required>
+                </div>
+                <div class="reservation-form__group">
+                    <input type="date" class="reservation-form__input" required>
+                </div>
+                <div class="reservation-form__group">
+                    <select class="reservation-form__input" required>
+                        <option value="" disabled selected>Количество гостей</option>
+                        <option value="1">1 человек</option>
+                        <option value="2">2 человека</option>
+                        <option value="3-4">3-4 человека</option>
+                        <option value="5-6">5-6 человек</option>
+                        <option value="7+">Более 6 человек</option>
+                    </select>
+                </div>
+                <div class="reservation-form__group">
+                    <textarea class="reservation-form__input reservation-form__input--textarea" placeholder="Дополнительные пожелания"></textarea>
+                </div>
+                <button type="submit" class="button button--primary reservation-form__submit">Отправить заявку</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Подключаем библиотеки -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    
+    <!-- Наши скрипты -->
+    <!-- <script type="module" src="./js/animations.js"></script> -->
+    <!-- <script type="module" src="./js/theme.js"></script> -->
+    
+    <!-- Инициализация AOS -->
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+    </script>
+</body>
+</html>

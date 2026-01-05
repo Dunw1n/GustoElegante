@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог блюд | Gusto Elegante</title>
+    
+    <!-- Подключаем иконки Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Подключаем красивый шрифт -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Подключаем AOS для анимаций при скролле -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    
+    <!-- Основные стили -->
+    
+    <!-- Фавикон -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <script type="module" crossorigin src="./assets/js/main-B-qqraqj.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/css/main-K8lbuoSD.css">
+</head>
+<body class="theme-light">
+    <!-- Переключатель темы -->
+    <div class="theme-toggle">
+        <button class="theme-toggle__button" aria-label="Переключить тему">
+            <i class="fas fa-moon theme-toggle__icon"></i>
+        </button>
+    </div>
+
+    <!-- Главный header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="navbar__logo">Gusto Elegante</a>
+                
+                <button class="navbar__burger" aria-label="Меню">
+                    <span class="navbar__burger-line"></span>
+                    <span class="navbar__burger-line"></span>
+                    <span class="navbar__burger-line"></span>
+                </button>
+                
+                <ul class="navbar__menu">
+                    <li class="navbar__item">
+                        <a href="index.html" class="navbar__link">Главная</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="about.html" class="navbar__link">О нас</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="catalog.html" class="navbar__link navbar__link--active">Каталог</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="#" class="navbar__link navbar__link--reservation">Резервация</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero секция для страницы каталога -->
+    <section class="hero hero--catalog">
+        <div class="container">
+            <div class="hero__content" data-aos="fade-up">
+                <h1 class="hero__title">Наше меню</h1>
+                <p class="hero__subtitle">Искусно приготовленные блюда из лучших ингредиентов</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция каталога -->
+    <section class="catalog">
+        <div class="container">
+            <!-- Категории меню -->
+            <div class="catalog__categories">
+                <button class="catalog__category catalog__category--active" data-category="all">Все блюда</button>
+                <button class="catalog__category" data-category="starters">Закуски</button>
+                <button class="catalog__category" data-category="main">Основные блюда</button>
+                <button class="catalog__category" data-category="desserts">Десерты</button>
+                <button class="catalog__category" data-category="drinks">Напитки</button>
+            </div>
+            
+            <!-- Сетка блюд -->
+            <div class="catalog__grid">
+                <!-- Блюдо 1 -->
+                <div class="catalog-item" data-category="starters" data-aos="fade-up">
+                    <div class="catalog-item__image">
+                        <img src="./assets/images/one-image-Dm6rjHVw.webp" alt="">
+                        <div class="catalog-item__image-placeholder"></div>
+                    </div>
+                    <div class="catalog-item__content">
+                        <h3 class="catalog-item__title">Брускетта с базиликом</h3>
+                        <p class="catalog-item__description">Хрустящий хлеб с сочными томатами, свежим базиликом и оливковым маслом холодного отжима</p>
+                        <div class="catalog-item__footer">
+                            <span class="catalog-item__price">650 ₽</span>
+                            <a href="item.html?id=4" class="catalog-item__button">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Блюдо 2 -->
+                <div class="catalog-item" data-category="main" data-aos="fade-up" data-aos-delay="100">
+                    <div class="catalog-item__image">
+                        <img src="./assets/images/two-image-BGhB-RRg.webp" alt="">
+                        <div class="catalog-item__image-placeholder"></div>
+                        <div class="catalog-item__badge">Хит</div>
+                    </div>
+                    <div class="catalog-item__content">
+                        <h3 class="catalog-item__title">Стейк рибай с овощами гриль</h3>
+                        <p class="catalog-item__description">Нежнейший стейк рибай прожарки medium rare с сезонными овощами гриль и соусом песто</p>
+                        <div class="catalog-item__footer">
+                            <span class="catalog-item__price">3 200 ₽</span>
+                            <a href="item.html?id=5" class="catalog-item__button">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Блюдо 3 -->
+                <div class="catalog-item" data-category="desserts" data-aos="fade-up" data-aos-delay="200">
+                    <div class="catalog-item__image">
+                        <img src="./assets/images/three-image-Bur6Q2tq.jpg" alt="">
+                        <div class="catalog-item__image-placeholder"></div>
+                    </div>
+                    <div class="catalog-item__content">
+                        <h3 class="catalog-item__title">Шоколадный фондан с малиной</h3>
+                        <p class="catalog-item__description">Теплый шоколадный кекс с жидкой сердцевиной, подается с малиновым соусом и ванильным мороженым</p>
+                        <div class="catalog-item__footer">
+                            <span class="catalog-item__price">1 350 ₽</span>
+                            <a href="item.html?id=6" class="catalog-item__button">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Блюдо 4 -->
+                <div class="catalog-item" data-category="starters" data-aos="fade-up" data-aos-delay="300">
+                    <div class="catalog-item__image">
+                       <img src="./assets/images/four-image-CvNXfgFm.png" alt="">
+                        <div class="catalog-item__image-placeholder"></div>
+                        <div class="catalog-item__badge catalog-item__badge--veg">Veg</div>
+                    </div>
+                    <div class="catalog-item__content">
+                        <h3 class="catalog-item__title">Салат "Капрезе"</h3>
+                        <p class="catalog-item__description">Классический итальянский салат с моцареллой, томатами и свежим базиликом</p>
+                        <div class="catalog-item__footer">
+                            <span class="catalog-item__price">950 ₽</span>
+                            <a href="item.html?id=7" class="catalog-item__button">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Блюдо 5 -->
+                <div class="catalog-item" data-category="main" data-aos="fade-up" data-aos-delay="400">
+                    <div class="catalog-item__image">
+                       <img src="./assets/images/five-image-BKPW3yfD.png" alt="">
+                        <div class="catalog-item__image-placeholder"></div>
+                    </div>
+                    <div class="catalog-item__content">
+                        <h3 class="catalog-item__title">Лосось в кунжутной корочке</h3>
+                        <p class="catalog-item__description">Филе лосося в кунжутной корочке с пюре из цветной капусты и соусом терияки</p>
+                        <div class="catalog-item__footer">
+                            <span class="catalog-item__price">2 150 ₽</span>
+                            <a href="item.html?id=8" class="catalog-item__button">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Блюдо 6 -->
+                <div class="catalog-item" data-category="drinks" data-aos="fade-up" data-aos-delay="500">
+                    <div class="catalog-item__image">
+                        <img src="./assets/images/six-image-CeCr2yNv.png" alt="">
+                        <div class="catalog-item__image-placeholder"></div>
+                    </div>
+                    <div class="catalog-item__content">
+                        <h3 class="catalog-item__title">Домашний лимонад с мятой</h3>
+                        <p class="catalog-item__description">Освежающий лимонад собственного приготовления с мятой и лаймом</p>
+                        <div class="catalog-item__footer">
+                            <span class="catalog-item__price">450 ₽</span>
+                            <a href="item.html?id=9" class="catalog-item__button">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Блюдо 7 -->
+                <div class="catalog-item" data-category="desserts" data-aos="fade-up" data-aos-delay="600">
+                    <div class="catalog-item__image">
+                        <img src="./assets/images/seven-image-ctWHOngK.webp" alt="">
+                        <div class="catalog-item__image-placeholder"></div>
+                    </div>
+                    <div class="catalog-item__content">
+                        <h3 class="catalog-item__title">Чизкейк Нью-Йорк</h3>
+                        <p class="catalog-item__description">Классический нью-йоркский чизкейк с ягодным соусом на выбор</p>
+                        <div class="catalog-item__footer">
+                            <span class="catalog-item__price">1 150 ₽</span>
+                            <a href="item.html?id=10" class="catalog-item__button">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Блюдо 8 -->
+                <div class="catalog-item" data-category="drinks" data-aos="fade-up" data-aos-delay="700">
+                    <div class="catalog-item__image">
+                        <img src="./assets/images/eaght-image-B70glhpU.webp" alt="">
+                        <div class="catalog-item__image-placeholder"></div>
+                    </div>
+                    <div class="catalog-item__content">
+                        <h3 class="catalog-item__title">Коктейль "Мохито"</h3>
+                        <p class="catalog-item__description">Классический кубинский коктейль с белым ромом, свежей мятой и лаймом</p>
+                        <div class="catalog-item__footer">
+                            <span class="catalog-item__price">850 ₽</span>
+                            <a href="item.html?id=11" class="catalog-item__button">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__column">
+                    <h3 class="footer__title">Gusto Elegante</h3>
+                    <p class="footer__text">Ресторан высокой кухни, где традиции встречаются с инновациями. Мы создаем незабываемые гастрономические впечатления.</p>
+                    <div class="footer__social">
+                        <a href="#" class="footer__social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="footer__social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="footer__social-link"><i class="fab fa-telegram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer__column">
+                    <h3 class="footer__title">Контакты</h3>
+                    <ul class="footer__list">
+                        <li class="footer__list-item">
+                            <i class="fas fa-map-marker-alt footer__list-icon"></i>
+                            <span>ул. Гастрономическая, 15</span>
+                        </li>
+                        <li class="footer__list-item">
+                            <i class="fas fa-phone footer__list-icon"></i>
+                            <span>+7 (495) 123-45-67</span>
+                        </li>
+                        <li class="footer__list-item">
+                            <i class="fas fa-envelope footer__list-icon"></i>
+                            <span>reserve@gustoelegante.ru</span>
+                        </li>
+                        <li class="footer__list-item">
+                            <i class="fas fa-clock footer__list-icon"></i>
+                            <span>Ежедневно с 12:00 до 00:00</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="footer__column">
+                    <h3 class="footer__title">Навигация</h3>
+                    <ul class="footer__list">
+                        <li class="footer__list-item">
+                            <a href="index.html" class="footer__link">Главная</a>
+                        </li>
+                        <li class="footer__list-item">
+                            <a href="about.html" class="footer__link">О нас</a>
+                        </li>
+                        <li class="footer__list-item">
+                            <a href="catalog.html" class="footer__link">Каталог</a>
+                        </li>
+                        <li class="footer__list-item">
+                            <a href="#" class="footer__link">Галерея</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p class="footer__copyright">© 2023 Gusto Elegante. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Модальное окно для резервации -->
+    <div class="modal modal--reservation">
+        <div class="modal__overlay"></div>
+        <div class="modal__content">
+            <button class="modal__close" aria-label="Закрыть">
+                <i class="fas fa-times"></i>
+            </button>
+            <h2 class="modal__title">Забронировать столик</h2>
+            <p class="modal__subtitle">Оставьте заявку и мы свяжемся с вами для подтверждения бронирования</p>
+            
+            <form class="reservation-form">
+                <div class="reservation-form__group">
+                    <input type="text" class="reservation-form__input" placeholder="Ваше имя" required>
+                </div>
+                <div class="reservation-form__group">
+                    <input type="tel" class="reservation-form__input" placeholder="Телефон" required>
+                </div>
+                <div class="reservation-form__group">
+                    <input type="date" class="reservation-form__input" required>
+                </div>
+                <div class="reservation-form__group">
+                    <select class="reservation-form__input" required>
+                        <option value="" disabled selected>Количество гостей</option>
+                        <option value="1">1 человек</option>
+                        <option value="2">2 человека</option>
+                        <option value="3-4">3-4 человека</option>
+                        <option value="5-6">5-6 человек</option>
+                        <option value="7+">Более 6 человек</option>
+                    </select>
+                </div>
+                <div class="reservation-form__group">
+                    <textarea class="reservation-form__input reservation-form__input--textarea" placeholder="Дополнительные пожелания"></textarea>
+                </div>
+                <button type="submit" class="button button--primary reservation-form__submit">Отправить заявку</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Подключаем библиотеки -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    
+    <!-- Наши скрипты -->
+    <!-- <script type="module" src="./js/animations.js"></script> -->
+    <!-- <script type="module" src="./js/theme.js"></script> -->
+    <!-- <script type="module" src="./js/catalog.js"></script> -->
+    
+    <!-- Инициализация AOS -->
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+    </script>
+</body>
+</html>
