@@ -349,6 +349,9 @@ button, input, textarea {
     text-align: center;
     max-width: 800px;
     margin: 0 auto;
+    @media (max-width: 992px) {
+      padding-top: 100px;
+    }
   }
   
   &__title {
