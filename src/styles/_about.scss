@@ -1,0 +1,220 @@
+// Дополнительные стили для страницы "О нас"
+.hero--about {
+  min-height: 400px;
+  height: 60vh;
+  
+  @media (max-width: 768px) {
+    height: 50vh;
+    min-height: 350px;
+  }
+}
+
+.about-philosophy {
+  padding: var(--spacing-xxl) 0;
+  
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xl);
+    align-items: center;
+    
+    @media (max-width: 992px) {
+      grid-template-columns: 1fr;
+      gap: var(--spacing-lg);
+    }
+  }
+  
+  &__text {
+    @media (max-width: 992px) {
+      order: 2;
+    }
+  }
+  
+  &__description {
+    margin-bottom: var(--spacing-md);
+    line-height: 1.7;
+    
+    &:last-of-type {
+      margin-bottom: var(--spacing-lg);
+    }
+  }
+  
+  &__quote {
+    font-family: var(--font-heading);
+    font-size: 24px;
+    font-style: italic;
+    color: var(--color-primary);
+    padding: var(--spacing-md);
+    border-left: 4px solid var(--color-primary);
+    background-color: rgba(193, 154, 107, 0.05);
+    border-radius: 0 var(--border-radius-medium) var(--border-radius-medium) 0;
+    
+    @media (max-width: 576px) {
+      font-size: 20px;
+    }
+  }
+  
+  &__image {
+    height: 400px;
+    border-radius: var(--border-radius-large);
+    overflow: hidden;
+    box-shadow: var(--shadow-large);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    @media (max-width: 992px) {
+      order: 1;
+      height: 300px;
+    }
+    
+    &-placeholder {
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(45deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    }
+  }
+}
+
+.team {
+  padding: var(--spacing-xxl) 0;
+  background-color: var(--color-surface);
+  
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-xl);
+    margin-top: var(--spacing-xl);
+  }
+}
+
+.team-member {
+  background-color: var(--color-background);
+  border-radius: var(--border-radius-medium);
+  overflow: hidden;
+  box-shadow: var(--shadow-medium);
+  transition: all 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-large);
+  }
+  
+  &__image {
+    height: 250px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    &-placeholder {
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(45deg, var(--color-primary) 0%, var(--color-secondary-light) 100%);
+    }
+  }
+  
+  &__info {
+    padding: var(--spacing-lg);
+  }
+  
+  &__name {
+    font-family: var(--font-heading);
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: var(--color-text);
+  }
+  
+  &__position {
+    font-size: 16px;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-md);
+    font-weight: 500;
+  }
+  
+  &__description {
+    color: var(--color-text-light);
+    line-height: 1.6;
+    margin-bottom: var(--spacing-md);
+  }
+  
+  &__social {
+    display: flex;
+    gap: var(--spacing-sm);
+  }
+  
+  &__social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background-color: var(--color-background);
+    border-radius: 50%;
+    color: var(--color-text);
+    font-size: 16px;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      background-color: var(--color-primary);
+      color: white;
+      transform: translateY(-3px);
+    }
+  }
+}
+
+.achievements {
+  padding: var(--spacing-xxl) 0;
+  
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-xl);
+    margin-top: var(--spacing-xl);
+  }
+}
+
+.achievement {
+  text-align: center;
+  padding: var(--spacing-lg);
+  background-color: var(--color-surface);
+  border-radius: var(--border-radius-medium);
+  box-shadow: var(--shadow-small);
+  transition: all 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-medium);
+  }
+  
+  &__number {
+    font-family: var(--font-heading);
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-sm);
+    
+    @media (max-width: 576px) {
+      font-size: 36px;
+    }
+  }
+  
+  &__title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: var(--spacing-xs);
+    color: var(--color-text);
+  }
+  
+  &__description {
+    color: var(--color-text-light);
+    font-size: 14px;
+  }
+}

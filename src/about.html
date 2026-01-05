@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О нас | Gusto Elegante</title>
+    
+    <!-- Подключаем иконки Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Подключаем красивый шрифт -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Подключаем AOS для анимаций при скролле -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    
+    <!-- Основные стили -->
+    <link rel="stylesheet" href="./styles/main.scss">
+    
+    <!-- Фавикон -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+</head>
+<body class="theme-light">
+    <!-- Переключатель темы -->
+    <div class="theme-toggle">
+        <button class="theme-toggle__button" aria-label="Переключить тему">
+            <i class="fas fa-moon theme-toggle__icon"></i>
+        </button>
+    </div>
+
+    <!-- Главный header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="navbar__logo">Gusto Elegante</a>
+                
+                <button class="navbar__burger" aria-label="Меню">
+                    <span class="navbar__burger-line"></span>
+                    <span class="navbar__burger-line"></span>
+                    <span class="navbar__burger-line"></span>
+                </button>
+                
+                <ul class="navbar__menu">
+                    <li class="navbar__item">
+                        <a href="index.html" class="navbar__link">Главная</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="about.html" class="navbar__link navbar__link--active">О нас</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="catalog.html" class="navbar__link">Каталог</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="#" class="navbar__link navbar__link--reservation">Резервация</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero секция для страницы "О нас" -->
+    <section class="hero hero--about">
+        <div class="container">
+            <div class="hero__content" data-aos="fade-up">
+                <h1 class="hero__title">Наша история</h1>
+                <p class="hero__subtitle">Более 15 лет мы создаем гастрономические впечатления, которые запоминаются навсегда</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция "Наша философия" -->
+    <section class="about-philosophy">
+        <div class="container">
+            <div class="about-philosophy__content">
+                <div class="about-philosophy__text" data-aos="fade-right">
+                    <h2 class="section-title">Философия вкуса</h2>
+                    <p class="about-philosophy__description">
+                        В основе нашего ресторана лежит философия, что еда — это не просто утоление голода, а настоящее искусство, способное пробуждать эмоции и создавать воспоминания.
+                    </p>
+                    <p class="about-philosophy__description">
+                        Мы верим, что каждый ингредиент имеет свою историю, и наша задача — рассказать её через вкус. Именно поэтому мы тщательно отбираем поставщиков, работая только с теми, кто разделяет наши ценности качества и уважения к природе.
+                    </p>
+                    <blockquote class="about-philosophy__quote">
+                        "Настоящая кухня — это диалог между традициями и инновациями, между шеф-поваром и гостем"
+                    </blockquote>
+                </div>
+                <div class="about-philosophy__image" data-aos="fade-left" data-aos-delay="200">
+                    <img src="./assets/phylosofy.webp" alt="">
+                    <div class="about-philosophy__image-placeholder"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция "Наша команда" -->
+    <section class="team">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Наша команда</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Талантливые профессионалы, которые делают каждый ваш визит незабываемым</p>
+            
+            <div class="team__grid">
+                <div class="team-member" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="team-member__image">
+                        <img src="./assets/noneimage.png" alt="">
+                        <div class="team-member__image-placeholder"></div>
+                    </div>
+                    <div class="team-member__info">
+                        <h3 class="team-member__name">Антонио Риццоли</h3>
+                        <p class="team-member__position">Шеф-повар</p>
+                        <p class="team-member__description">Опыт работы в ресторанах Милана и Парижа. Специалист в области средиземноморской кухни.</p>
+                        <div class="team-member__social">
+                            <a href="#" class="team-member__social-link"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="team-member__social-link"><i class="fab fa-facebook-f"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="team-member" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="team-member__image">
+                         <img src="./assets/noneimage.png" alt="">
+                        <div class="team-member__image-placeholder"></div>
+                    </div>
+                    <div class="team-member__info">
+                        <h3 class="team-member__name">Екатерина Волкова</h3>
+                        <p class="team-member__position">Управляющий сомелье</p>
+                        <p class="team-member__description">Сертифицированный сомелье с 10-летним опытом. Знаток французских и итальянских вин.</p>
+                        <div class="team-member__social">
+                            <a href="#" class="team-member__social-link"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="team-member__social-link"><i class="fab fa-facebook-f"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="team-member" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="team-member__image">
+                         <img src="./assets/noneimage.png" alt="">
+                        <div class="team-member__image-placeholder"></div>
+                    </div>
+                    <div class="team-member__info">
+                        <h3 class="team-member__name">Мария Соколова</h3>
+                        <p class="team-member__position">Кондитер</p>
+                        <p class="team-member__description">Выпускница Le Cordon Bleu. Создает десерты, которые являются произведениями искусства.</p>
+                        <div class="team-member__social">
+                            <a href="#" class="team-member__social-link"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="team-member__social-link"><i class="fab fa-facebook-f"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция "Наши достижения" -->
+    <section class="achievements">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Наши достижения</h2>
+            
+            <div class="achievements__grid">
+                <div class="achievement" data-aos="fade-up" data-aos-delay="100">
+                    <div class="achievement__number">15+</div>
+                    <div class="achievement__title">Лет опыта</div>
+                    <div class="achievement__description">Успешно работаем с 2008 года</div>
+                </div>
+                
+                <div class="achievement" data-aos="fade-up" data-aos-delay="200">
+                    <div class="achievement__number">50+</div>
+                    <div class="achievement__title">Наград</div>
+                    <div class="achievement__description">Международные и национальные награды</div>
+                </div>
+                
+                <div class="achievement" data-aos="fade-up" data-aos-delay="300">
+                    <div class="achievement__number">1000+</div>
+                    <div class="achievement__title">Довольных гостей</div>
+                    <div class="achievement__description">Ежемесячно посещают наш ресторан</div>
+                </div>
+                
+                <div class="achievement" data-aos="fade-up" data-aos-delay="400">
+                    <div class="achievement__number">200+</div>
+                    <div class="achievement__title">Блюд в меню</div>
+                    <div class="achievement__description">Уникальные рецепты от наших шеф-поваров</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер (одинаковый для всех страниц) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__column">
+                    <h3 class="footer__title">Gusto Elegante</h3>
+                    <p class="footer__text">Ресторан высокой кухни, где традиции встречаются с инновациями. Мы создаем незабываемые гастрономические впечатления.</p>
+                    <div class="footer__social">
+                        <a href="#" class="footer__social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="footer__social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="footer__social-link"><i class="fab fa-telegram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer__column">
+                    <h3 class="footer__title">Контакты</h3>
+                    <ul class="footer__list">
+                        <li class="footer__list-item">
+                            <i class="fas fa-map-marker-alt footer__list-icon"></i>
+                            <span>ул. Гастрономическая, 15</span>
+                        </li>
+                        <li class="footer__list-item">
+                            <i class="fas fa-phone footer__list-icon"></i>
+                            <span>+7 (495) 123-45-67</span>
+                        </li>
+                        <li class="footer__list-item">
+                            <i class="fas fa-envelope footer__list-icon"></i>
+                            <span>reserve@gustoelegante.ru</span>
+                        </li>
+                        <li class="footer__list-item">
+                            <i class="fas fa-clock footer__list-icon"></i>
+                            <span>Ежедневно с 12:00 до 00:00</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="footer__column">
+                    <h3 class="footer__title">Навигация</h3>
+                    <ul class="footer__list">
+                        <li class="footer__list-item">
+                            <a href="index.html" class="footer__link">Главная</a>
+                        </li>
+                        <li class="footer__list-item">
+                            <a href="about.html" class="footer__link">О нас</a>
+                        </li>
+                        <li class="footer__list-item">
+                            <a href="catalog.html" class="footer__link">Каталог</a>
+                        </li>
+                        <li class="footer__list-item">
+                            <a href="#" class="footer__link">Галерея</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p class="footer__copyright">© 2023 Gusto Elegante. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Модальное окно для резервации -->
+    <div class="modal modal--reservation">
+        <div class="modal__overlay"></div>
+        <div class="modal__content">
+            <button class="modal__close" aria-label="Закрыть">
+                <i class="fas fa-times"></i>
+            </button>
+            <h2 class="modal__title">Забронировать столик</h2>
+            <p class="modal__subtitle">Оставьте заявку и мы свяжемся с вами для подтверждения бронирования</p>
+            
+            <form class="reservation-form">
+                <div class="reservation-form__group">
+                    <input type="text" class="reservation-form__input" placeholder="Ваше имя" required>
+                </div>
+                <div class="reservation-form__group">
+                    <input type="tel" class="reservation-form__input" placeholder="Телефон" required>
+                </div>
+                <div class="reservation-form__group">
+                    <input type="date" class="reservation-form__input" required>
+                </div>
+                <div class="reservation-form__group">
+                    <select class="reservation-form__input" required>
+                        <option value="" disabled selected>Количество гостей</option>
+                        <option value="1">1 человек</option>
+                        <option value="2">2 человека</option>
+                        <option value="3-4">3-4 человека</option>
+                        <option value="5-6">5-6 человек</option>
+                        <option value="7+">Более 6 человек</option>
+                    </select>
+                </div>
+                <div class="reservation-form__group">
+                    <textarea class="reservation-form__input reservation-form__input--textarea" placeholder="Дополнительные пожелания"></textarea>
+                </div>
+                <button type="submit" class="button button--primary reservation-form__submit">Отправить заявку</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Подключаем библиотеки -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    
+    <!-- Наши скрипты -->
+    <!-- <script type="module" src="./js/animations.js"></script> -->
+    <!-- <script type="module" src="./js/theme.js"></script> -->
+    <script type="module" src="./js/main.js"></script>
+    
+    <!-- Инициализация AOS -->
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+    </script>
+</body>
+</html>
