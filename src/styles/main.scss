@@ -25,6 +25,7 @@
   
   // Отступы
   --spacing-xs: 8px;
+  --spacing-sm-mobile: 10px;
   --spacing-sm: 16px;
   --spacing-md: 24px;
   --spacing-lg: 32px;
@@ -84,7 +85,7 @@ button, input, textarea {
   padding: 0 var(--spacing-md);
   
   @media (max-width: 768px) {
-    padding: 0 var(--spacing-sm);
+    padding: 0 var(--spacing-sm-mobile);
   }
 }
 
@@ -341,6 +342,31 @@ button, input, textarea {
   overflow: hidden;
 //   background: linear-gradient(135deg, rgba(193, 154, 107, 0.1) 0%, rgba(44, 62, 80, 0.1) 100%);
   background: url("../assets/images/background/BGmain.png") center center / cover no-repeat;
+
+  @media (max-width: 567px) {
+    background: url("../assets/images/background/BGmain.png");
+    background-repeat: no-repeat;
+  
+
+
+    .hero {
+      position: relative;
+      z-index: 1;
+      &__overlay {
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100dvh;
+        background-color: #000000b2;
+        z-index: 0;
+      }
+
+      &__subtitle {
+        color: #b4b4b4;
+      }
+    }
+  }
 
   
   &__content {
@@ -607,6 +633,24 @@ button, input, textarea {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: var(--spacing-xl);
     margin-bottom: var(--spacing-xl);
+  }
+
+   @media (max-width: 767px) {
+      &__copyright {
+        flex-direction: column;
+        row-gap: 10px;
+      }
+  }
+
+  &__copyright {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    justify-content: center;
+
+    img {
+      height: 20px;
+    }
   }
   
   &__title {
