@@ -213,13 +213,11 @@
   &__ingredients-list {
     display: flex;
     flex-wrap: wrap;
-    // gap: var(--spacing-sm);
 
     @media (max-width: 567px) {
       flex-direction: column;
       padding-left: 20px;
-      // row-gap: 10px;
-      // background-color: #555555;
+
 
       display: grid;
       grid-template-columns: repeat(2, minmax(40%, 1fr));
