@@ -1,6 +1,3 @@
-// Общие UI компоненты
-
-// Бургер-меню
 export function initBurgerMenu() {
     const burger = document.querySelector('.navbar__burger');
     const menu = document.querySelector('.navbar__menu');
@@ -13,7 +10,6 @@ export function initBurgerMenu() {
         document.body.style.overflow = menu.classList.contains('navbar__menu--active') ? 'hidden' : '';
     });
     
-    // Закрытие меню при клике на ссылку
     const menuLinks = document.querySelectorAll('.navbar__link');
     menuLinks.forEach(link => {
         link.addEventListener('click', function() {
@@ -24,7 +20,6 @@ export function initBurgerMenu() {
     });
 }
 
-// Модальное окно резервации
 export function initModal() {
     const reservationButtons = document.querySelectorAll('.navbar__link--reservation, .button--secondary');
     const modal = document.querySelector('.modal--reservation');
@@ -33,7 +28,6 @@ export function initModal() {
     
     if (!modal || !modalClose || !modalOverlay) return;
     
-    // Открытие модального окна
     reservationButtons.forEach(button => {
         button.addEventListener('click', function(e) {
             e.preventDefault();
@@ -42,7 +36,6 @@ export function initModal() {
         });
     });
     
-    // Закрытие модального окна
     function closeModal() {
         modal.classList.remove('modal--active');
         document.body.style.overflow = '';
@@ -51,41 +44,33 @@ export function initModal() {
     modalClose.addEventListener('click', closeModal);
     modalOverlay.addEventListener('click', closeModal);
     
-    // Закрытие по Escape
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape' && modal.classList.contains('modal--active')) {
             closeModal();
         }
     });
     
-    // Обработка формы резервации
     const reservationForm = document.querySelector('.reservation-form');
     if (reservationForm) {
         reservationForm.addEventListener('submit', function(e) {
             e.preventDefault();
             
-            // Здесь будет отправка формы на сервер
             const formData = new FormData(this);
-            const name = formData.get('name') || 'не указано';
-            
-            // Показываем сообщение об успехе
-            alert(`Спасибо, ${name}! Ваша заявка на резервацию принята. Мы свяжемся с вами в ближайшее время для подтверждения.`);
-            
+            // const name = formData.get('name') || 'не указано';
+
             closeModal();
             this.reset();
         });
     }
 }
 
-// Плавный скролл
 export function initSmoothScroll() {
     const scrollLinks = document.querySelectorAll('a[href^="#"]');
     
     scrollLinks.forEach(link => {
         link.addEventListener('click', function(e) {
             const href = this.getAttribute('href');
-            
-            // Пропускаем ссылки, которые не ведут на якорь или ведут на другую страницу
+     
             if (href === '#' || href.startsWith('#!') || href.startsWith('http')) return;
             
             e.preventDefault();
@@ -103,7 +88,6 @@ export function initSmoothScroll() {
     });
 }
 
-// Изменение header при скролле
 export function initScrollHeader() {
     const header = document.querySelector('.header');
     

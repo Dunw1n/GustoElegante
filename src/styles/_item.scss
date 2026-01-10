@@ -1,4 +1,3 @@
-// Дополнительные стили для страницы товара
 .breadcrumbs {
   padding: var(--spacing-md) 0;
   background-color: var(--color-surface);
@@ -306,10 +305,8 @@
     align-items: center;
     justify-content: center;
 
-    //  button {
     padding: 12px 10px;
     font-size: 14px;
-  // }
     gap: var(--spacing-sm);
     
     i {

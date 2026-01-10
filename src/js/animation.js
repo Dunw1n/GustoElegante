@@ -1,7 +1,4 @@
-// Дополнительные анимации
-
 export function initAnimations() {
-    // Анимация карточек при наведении
     const cards = document.querySelectorAll('.dish-card, .feature-card');
     
     cards.forEach(card => {
@@ -14,7 +11,6 @@ export function initAnimations() {
         });
     });
     
-    // Плавное появление элементов при скролле (дополнительно к AOS)
     const observerOptions = {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
@@ -28,14 +24,12 @@ export function initAnimations() {
         });
     }, observerOptions);
     
-    // Наблюдаем за элементами, которые не анимируются через AOS
     const elementsToAnimate = document.querySelectorAll('.footer__column, .dish-card__description, .feature-card__description');
     
     elementsToAnimate.forEach(element => {
         observer.observe(element);
     });
     
-    // Анимация для индикатора скролла
     const scrollIndicator = document.querySelector('.hero__scroll-indicator');
     if (scrollIndicator) {
         let lastScrollTop = 0;
@@ -44,10 +38,8 @@ export function initAnimations() {
             const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
             
             if (scrollTop > lastScrollTop) {
-                // Скроллим вниз
                 scrollIndicator.style.opacity = '0';
             } else {
-                // Скроллим вверх
                 scrollIndicator.style.opacity = '1';
             }
             

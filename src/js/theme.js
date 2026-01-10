@@ -1,12 +1,9 @@
-// Управление темной/светлой темой
-
 export function initTheme() {
     const themeToggle = document.querySelector('.theme-toggle__button');
     const themeIcon = document.querySelector('.theme-toggle__icon');
     
     if (!themeToggle || !themeIcon) return;
     
-    // Проверяем сохраненную тему или системные настройки
     const savedTheme = localStorage.getItem('theme');
     const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     
@@ -17,8 +14,7 @@ export function initTheme() {
     }
     
     updateThemeIcon();
-    
-    // Обработка клика по переключателю
+
     themeToggle.addEventListener('click', function() {
         document.body.classList.toggle('theme-dark');
         
@@ -26,8 +22,7 @@ export function initTheme() {
         localStorage.setItem('theme', isDark ? 'dark' : 'light');
         
         updateThemeIcon();
-        
-        // Анимация переключения
+
         this.style.transform = 'rotate(360deg)';
         setTimeout(() => {
             this.style.transform = '';

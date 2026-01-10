@@ -48,8 +48,6 @@
         color: white;
       }
     }
-
-   
   }
   
   &__grid {
@@ -70,7 +68,6 @@
         &__wrapper {
           display: flex;
           flex-direction: column-reverse;
-
         }
 
         &__category {
@@ -81,7 +78,6 @@
         &__category:last-child {
           grid-column: 1 / 3;
           grid-row: 3 / 4;
-         
         }
      }
    }
@@ -93,6 +89,9 @@
   overflow: hidden;
   box-shadow: var(--shadow-small);
   transition: all 0.3s ease;
+  height: 420px; /* Фиксированная высота карточки */
+  display: flex; /* Добавляем flex */
+  flex-direction: column; /* Вертикальное направление */
   
   &:hover {
     transform: translateY(-10px);
@@ -107,6 +106,7 @@
     height: 180px;
     position: relative;
     overflow: hidden;
+    flex-shrink: 0; /* Изображение не сжимается */
 
     img {
       width: 100%;
@@ -132,6 +132,7 @@
     border-radius: 4px;
     font-size: 12px;
     font-weight: 600;
+    flex-shrink: 0; /* Бейдж не сжимается */
     
     &--veg {
       background-color: var(--color-success);
@@ -139,8 +140,11 @@
   }
   
   &__content {
-    padding:  var(--spacing-md);
-   
+    padding: var(--spacing-md);
+    flex: 1; /* Растягиваем на все доступное пространство */
+    display: flex; /* Внутренний flex */
+    flex-direction: column;
+    min-height: 0; /* Важно для корректной работы overflow */
   }
   
   &__title {
@@ -149,6 +153,7 @@
     font-weight: 600;
     margin-bottom: var(--spacing-sm);
     color: var(--color-text);
+    flex-shrink: 0; /* Заголовок не сжимается */
   }
   
   &__description {
@@ -156,12 +161,24 @@
     margin-bottom: var(--spacing-lg);
     line-height: 1.6;
     font-size: 14px;
+    flex: 1; /* Описание растягивается */
+    overflow: hidden; /* Скрываем лишнее */
+    
+    /* Ограничиваем количество строк */
+    display: -webkit-box;
+    -webkit-line-clamp: 3; 
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
   }
   
   &__footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-shrink: 0;
+    margin-top: auto; 
+    padding-top: 12px;
+    border-top: 1px solid rgba(0,0,0,0.1);
   }
   
   &__price {
@@ -183,6 +200,71 @@
     
     &:hover {
       background-color: var(--color-primary-dark);
+    }
+  }
+}
+
+.catalog-item--scrollable {
+  .catalog-item__description {
+    overflow-y: auto; 
+    padding-right: 5px;
+    margin-bottom: var(--spacing-md);
+    display: block;
+    -webkit-line-clamp: unset;
+  }
+  
+  .catalog-item__description::-webkit-scrollbar {
+    width: 4px;
+  }
+  
+  .catalog-item__description::-webkit-scrollbar-thumb {
+    background: var(--color-border);
+    border-radius: 2px;
+  }
+}
+
+.catalog-item--compact {
+  height: 400px; 
+  
+  .catalog-item__description {
+    -webkit-line-clamp: 2; 
+    height: 2.8em; 
+  }
+}
+
+@media (max-width: 768px) {
+  .catalog-item {
+    height: 400px; 
+    
+    &__image {
+      height: 160px;
+    }
+    
+    &__title {
+      font-size: 18px;
+    }
+    
+    &__price {
+      font-size: 20px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .catalog-item {
+    height: 380px;
+    
+    &__image {
+      height: 140px;
+    }
+    
+    &__description {
+      -webkit-line-clamp: 2;
+      margin-bottom: var(--spacing-md);
+    }
+    
+    &__footer {
+      padding-top: 10px;
     }
   }
 }

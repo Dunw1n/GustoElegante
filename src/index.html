@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Gusto Elegante | Премиум ресторан итальянской кухни в Москве</title>
+    <title>Gusto Elegante | Премиум ресторан итальянской кухни в Москве</title>
     <meta name="description" content="Gusto Elegante - элегантный ресторан итальянской кухни в Москве. Авторские блюда от шеф-повара, изысканные вина и атмосфера уюта. Бронирование столиков онлайн.">
     <meta name="keywords" content="ресторан Москва, итальянская кухня, премиум ресторан, ужин в Москве, паста, пицца, морепродукты, винная карта, банкеты, романтический ужин">
     
-     <meta property="og:title" content="GustoElegante - элегантный ресторан итальянской кухни в Москве. Авторские блюда от шеф-повара, изысканные вина и атмосфера уюта. Бронирование столиков онлайн.">
+    <meta property="og:title" content="GustoElegante - элегантный ресторан итальянской кухни в Москве. Авторские блюда от шеф-повара, изысканные вина и атмосфера уюта. Бронирование столиков онлайн.">
     <meta property="og:description" content="ресторан Москва, итальянская кухня, премиум ресторан, ужин в Москве, паста, пицца, морепродукты, винная карта, банкеты, романтический ужин">
     <meta property="og:image" content="https://dunw1n.github.io/GustoElegante/preview.jpg">
     <meta property="og:image:width" content="1200">
@@ -16,48 +16,35 @@
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="GustoElegante">
     <meta property="og:locale" content="ru_RU">
-    
-    <!-- Twitter Card -->
+
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="GustoElegante - элегантный ресторан итальянской кухни в Москве. Авторские блюда от шеф-повара, изысканные вина и атмосфера уюта. Бронирование столиков онлайн.">
     <meta name="twitter:description" content="ресторан Москва, итальянская кухня, премиум ресторан, ужин в Москве, паста, пицца, морепродукты, винная карта, банкеты, романтический ужин">
     <meta name="twitter:image" content="https://dunw1n.github.io/GustoElegante/preview.jpg">
-    
-    <!-- Дополнительные SEO метатеги -->
+
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="author" content="GustoElegante">
     <meta name="copyright" content="GustoElegante">
     <meta name="theme-color" content="#1a5fb4">
-    
-    <!-- Каноническая ссылка -->
+
     <link rel="canonical" href="https://dunw1n.github.io/GustoElegante/">
-    
-    <!-- Фавиконы и иконки -->
+
     <link rel="icon" type="image/x-icon" href="https://dunw1n.github.io/GustoElegante/favicon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="https://dunw1n.github.io/GustoElegante/favicon.png">
     <link rel="icon" type="image/png" sizes="16x16" href="https://dunw1n.github.io/GustoElegante/favicon.png">
     <link rel="apple-touch-icon" sizes="180x180" href="https://dunw1n.github.io/GustoElegante/favicon.png">
-    <!-- <link rel="manifest" href="/site.webmanifest"> -->
-    
-    <!-- Веб-шрифты -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- Иконки Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Swiper для слайдеров -->
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
     
-    <!-- Основные стили -->
     <link rel="stylesheet" href="./styles/main.scss">
 </head>
 <body class="theme-light">
-    <!-- Переключатель темы -->
-    
-
-    <!-- Главный header -->
     <header class="header">
         <div class="container">
             <nav class="navbar">
@@ -80,7 +67,7 @@
                         <a href="catalog.html" class="navbar__link">Каталог</a>
                     </li>
                     <li class="navbar__item">
-                        <a href="#" class="navbar__link navbar__link--reservation">Резервация</a>
+                        <a href="#" class="navbar__link navbar__link--reservation" onclick="openReservationModal()">Резервация</a>
                     </li>
                     <li class="navbar__item">
                         <div class="theme-toggle">
@@ -95,7 +82,6 @@
         </div>
     </header>
 
-    <!-- Hero секция -->
     <section class="hero">
         <div class="container">
             <div class="hero__content" data-aos="fade-up">
@@ -113,8 +99,6 @@
 
         <div class="app__overlay"></div>
     </section>
-
-    <!-- Секция "Особенности" -->
     <section class="features">
         <div class="container">
             <h2 class="section-title" data-aos="fade-up">Почему выбирают нас</h2>
@@ -154,17 +138,14 @@
         </div>
     </section>
 
-    <!-- Секция "Рекомендуем попробовать" -->
     <section class="recommended">
         <div class="container">
             <h2 class="section-title" data-aos="fade-up">Рекомендуем попробовать</h2>
             <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Наши лучшие блюда по отзывам гостей</p>
             
             <div class="recommended__grid">
-                <!-- Карточка товара 1 -->
                 <div class="dish-card" data-aos="flip-left" data-aos-delay="200">
                     <div class="dish-card__image">
-                        <!-- Здесь будет изображение -->
                          <img src="./assets/images/ItemsHome/oneImage.jpg" alt="">
                         <div class="dish-card__image-placeholder"></div>
                         <div class="dish-card__badge">Хит</div>
@@ -178,8 +159,7 @@
                         </div>
                     </div>
                 </div>
-                
-                <!-- Карточка товара 2 -->
+
                 <div class="dish-card" data-aos="flip-left" data-aos-delay="300">
                     <div class="dish-card__image">
                         <img src="./assets/images/ItemsHome/twoImage.png" alt="">
@@ -195,8 +175,7 @@
                         </div>
                     </div>
                 </div>
-                
-                <!-- Карточка товара 3 -->
+
                 <div class="dish-card" data-aos="flip-left" data-aos-delay="400">
                     <div class="dish-card__image">
                         <img src="./assets/images/ItemsHome/threeImage.png" alt="">
@@ -219,7 +198,6 @@
         </div>
     </section>
 
-    <!-- Футер -->
     <footer class="footer">
         <div class="container">
             <div class="footer__grid">
@@ -275,14 +253,13 @@
             </div>
             
             <div class="footer__bottom">
-                             <p class="footer__copyright">© 2026 Gusto Elegante. Все права защищены. Сайт разработан студией <img src="/Logo.svg" alt=""></p>
+                <p class="footer__copyright">© 2026 Gusto Elegante. Все права защищены. Сайт разработан студией <img src="/Logo.svg" alt=""></p>
             </div>
         </div>
     </footer>
 
-    <!-- Модальное окно для резервации -->
     <div class="modal modal--reservation">
-        <div class="modal__overlay"></div>
+    <div class="modal__overlay"></div>
         <div class="modal__content">
             <button class="modal__close" aria-label="Закрыть">
                 <i class="fas fa-times"></i>
@@ -290,18 +267,47 @@
             <h2 class="modal__title">Забронировать столик</h2>
             <p class="modal__subtitle">Оставьте заявку и мы свяжемся с вами для подтверждения бронирования</p>
             
-            <form class="reservation-form">
+            <form id="reservationForm" action="https://formspree.io/f/xnjjaqjk" method="POST" class="reservation-form" novalidate>
                 <div class="reservation-form__group">
-                    <input type="text" class="reservation-form__input" placeholder="Ваше имя" required>
+                    <input type="text" 
+                        class="reservation-form__input" 
+                        id="name"
+                        name="name"
+                        placeholder="Ваше имя" 
+                        required
+                        minlength="2"
+                        maxlength="50"
+                        pattern="^[А-Яа-яЁёA-Za-z\s\-]+$">
+                    <div class="reservation-form__error" data-error="name"></div>
                 </div>
+                
                 <div class="reservation-form__group">
-                    <input type="tel" class="reservation-form__input" placeholder="Телефон" required>
+                    <input type="tel" 
+                        class="reservation-form__input" 
+                        id="phone"
+                        name="phone"
+                        placeholder="+7 (___) ___-__-__"
+                        required
+                        pattern="^[\+]?[78]?[0-9]{10}$"
+                        data-phone-mask>
+                    <div class="reservation-form__error" data-error="phone"></div>
                 </div>
+                
                 <div class="reservation-form__group">
-                    <input type="date" class="reservation-form__input" required>
+                    <input type="date" 
+                        class="reservation-form__input" 
+                        id="date"
+                        name="date"
+                        required
+                        min="<?php echo date('Y-m-d'); ?>">
+                    <div class="reservation-form__error" data-error="date"></div>
                 </div>
+                
                 <div class="reservation-form__group">
-                    <select class="reservation-form__input" required>
+                    <select class="reservation-form__input" 
+                            id="guests"
+                            name="guests"
+                            required>
                         <option value="" disabled selected>Количество гостей</option>
                         <option value="1">1 человек</option>
                         <option value="2">2 человека</option>
@@ -309,24 +315,45 @@
                         <option value="5-6">5-6 человек</option>
                         <option value="7+">Более 6 человек</option>
                     </select>
+                    <div class="reservation-form__error" data-error="guests"></div>
                 </div>
+                
                 <div class="reservation-form__group">
-                    <textarea class="reservation-form__input reservation-form__input--textarea" placeholder="Дополнительные пожелания"></textarea>
+                    <textarea class="reservation-form__input reservation-form__input--textarea" 
+                            id="message"
+                            name="message"
+                            placeholder="Дополнительные пожелания"
+                            maxlength="500"
+                            resize="none"></textarea>
+                    <div class="reservation-form__counter">
+                        <span id="charCount">0</span>/500
+                    </div>
                 </div>
-                <button type="submit" class="button button--primary reservation-form__submit">Отправить заявку</button>
+                
+                <div class="reservation-form__message reservation-form__message--success">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Заявка успешно отправлена! Мы свяжемся с вами в ближайшее время.</span>
+                </div>
+                
+                <div class="reservation-form__message reservation-form__message--error">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <span>Произошла ошибка при отправке. Пожалуйста, попробуйте еще раз.</span>
+                </div>
+                
+                <button type="submit" class="button button--primary reservation-form__submit" disabled>
+                    <span class="reservation-form__submit-text">Отправить заявку</span>
+                    <div class="reservation-form__loader">
+                        <div class="reservation-form__loader-spinner"></div>
+                    </div>
+                </button>
             </form>
         </div>
-    </div>
+    </div>  
 
-    <!-- Подключаем библиотеки -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     
-    <!-- Наши скрипты -->
-    <!-- <script type="module" src="./js/animations.js"></script> -->
-    <!-- <script type="module" src="./js/theme.js"></script> -->
     <script type="module" src="./js/main.js"></script>
     
-    <!-- Инициализация AOS -->
     <script>
         AOS.init({
             duration: 800,
